@@ -587,7 +587,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     });
 
     return (
-      <Animated.View style={{ zIndex: 9 }}>
+      <Animated.View style={{ zIndex: 9, flex: 1 }}>
         <Animated.View style={{ ...this.styles.container, opacity: this.fadeAnim }}>
           {this!.props!.renderHeader!(this.state.currentShowIndex)}
 
@@ -692,7 +692,7 @@ export default class ImageViewer extends React.Component<Props, State> {
     let childs: React.ReactElement<any> = null as any;
 
     childs = (
-      <View>
+      <View style={{ flex:1 }}>
         {this.getContent()}
         {this.getMenu()}
       </View>
